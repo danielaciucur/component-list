@@ -1,0 +1,32 @@
+<h3>Multiple selection</h3>
+<p>
+  <mat-form-field>
+    <mat-select
+      [formControl]="selectedComponent"
+      placeholder="Banks"
+      [multiple]="true"
+      #multiSelect
+    >
+      <mat-option>
+        <ngx-mat-select-search
+          [formControl]="filteredComponent"
+        ></ngx-mat-select-search>
+      </mat-option>
+      <div style="display: flex; margin-left: 50px;margin-bottom: 20px">
+        <div>Name</div>
+        <mat-divider [vertical]="true"></mat-divider>
+        <div>Code</div>
+      </div>
+      <mat-option
+        *ngFor="let filteredComponent of filteredComponents | async"
+        [value]="filteredComponent"
+      >
+        {{ filteredComponent.name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</p>
+<p>Selected Banks:</p>
+<ul *ngFor="let bank of selectedComponent?.value">
+  <li>{{ bank.name }}</li>
+</ul>
