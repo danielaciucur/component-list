@@ -64,7 +64,7 @@ export class MedicalComponentPickerComponent {
    } else {
      search = search.toLowerCase();
      this.filteredComponents.next(
-      this._medicalComponentList.filter((medicalComponent: MedicalComponent) => medicalComponent.name.toLowerCase().indexOf(search!) > -1)
+      this._medicalComponentList.filter((medicalComponent: MedicalComponent) => medicalComponent.name.toLowerCase().indexOf(search!) > -1 || medicalComponent.code.indexOf(search!) > -1)
     );
    }
    // filter the banks

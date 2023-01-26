@@ -1,9 +1,8 @@
-<h3>Multiple selection</h3>
 <p>
   <mat-form-field>
     <mat-select
       [formControl]="selectedComponent"
-      placeholder="Banks"
+      placeholder="Components"
       [multiple]="true"
       #multiSelect
     >
@@ -21,12 +20,12 @@
         *ngFor="let filteredComponent of filteredComponents | async"
         [value]="filteredComponent"
       >
-        {{ filteredComponent.name }}
+        {{ filteredComponent.name }} | {{ filteredComponent.code}}
       </mat-option>
     </mat-select>
   </mat-form-field>
 </p>
-<p>Selected Banks:</p>
-<ul *ngFor="let bank of selectedComponent?.value">
-  <li>{{ bank.name }}</li>
+<p>Selected Components:</p>
+<ul *ngFor="let selectedComponent of selectedComponent?.value">
+  <li>{{ selectedComponent.name }}</li>
 </ul>
