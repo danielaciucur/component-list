@@ -1,4 +1,23 @@
-<h1>
-    Welcome to your new guideline! Please add a component by selecting from the drop-down!
-</h1>
-<app-medical-component-picker [medicalComponentList] = "medicalComponentList$ | async"></app-medical-component-picker>
+<mat-card class="guideline-content">
+    <mat-card-header>
+        <mat-card-title>
+            Guideline for identifying a cold
+        </mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+        <mat-card class="component-content">
+            <mat-card-header>
+                <mat-card-title> Chapter 1 </mat-card-title>
+                <mat-card-subtitle> Symptoms </mat-card-subtitle>
+                <button mat-raised-button color="primary">Add components</button>
+            </mat-card-header>
+            <mat-card-content>
+                
+            </mat-card-content>
+        </mat-card>
+    </mat-card-content>
+</mat-card>
+
+
+<!--<app-medical-component-picker [medicalComponentList] = "medicalComponentList$ | async"></app-medical-component-picker>-->

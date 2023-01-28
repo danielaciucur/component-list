@@ -8,8 +8,6 @@ import { Observable, of } from 'rxjs';
 })
 export class MedicalComponentsService {
 
-  constructor() { }
-
   getMedicalComponents(): Observable<MedicalComponent[]> {
     return of(MEDICAL_COMPONENTS);
   }

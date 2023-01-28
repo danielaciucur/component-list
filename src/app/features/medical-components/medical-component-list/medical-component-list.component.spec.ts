@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MedicalComponentPickerComponent } from './medical-component-picker.component';
+import { MedicalComponentPickerComponent } from './medical-component-list.component';
 
 describe('MedicalComponentPickerComponent', () => {
   let component: MedicalComponentPickerComponent;

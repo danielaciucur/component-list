@@ -1,0 +1,18 @@
+.guideline-content {
+    max-width: 800px;
+    max-height: 600px;
+    padding: 20px;
+    margin: 50px;
+    background-color: lightgray;
+    height: 100%;
+}
+
+.component-content {
+    max-width: 600px;
+    padding: 20px;
+    height: 100%;
+
+    mat-card-header {
+        justify-content: space-between;
+    }
+}

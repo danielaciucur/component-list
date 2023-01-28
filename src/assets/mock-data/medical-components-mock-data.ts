@@ -44,13 +44,13 @@ export const MEDICAL_COMPONENTS: MedicalComponent[] = [
     },
     {
         id: 7,
-        name: "Depression",
+        name: "Fever",
         code: "dfg46frr",
-        description: "Depression is a mental state of low mood and aversion to activity. It affects more than 280 million people of all ages (about 3.5% of the global population). Classified medically as a mental and behavioral disorder, the experience of depression affects a person's thoughts, behavior, motivation, feelings, and sense of well-being. The core symptom of depression is said to be anhedonia, which refers to loss of interest or a loss of feeling of pleasure in certain activities that usually bring joy to people. Depressed mood is a symptom of some mood disorders such as major depressive disorder and dysthymia; it is a normal temporary reaction to life events, such as the loss of a loved one; and it is also a symptom of some physical diseases and a side effect of some drugs and medical treatments. It may feature sadness, difficulty in thinking and concentration and a significant increase or decrease in appetite and time spent sleeping. People experiencing depression may have feelings of dejection, hopelessness and suicidal thoughts. It can either be short term or long term."
+        description: "Fever, also referred to as pyrexia, is defined as having a temperature above the normal range due to an increase in the body's temperature set point. There is not a single agreed-upon upper limit for normal temperature with sources using values between 37.2 and 38.3 °C (99.0 and 100.9 °F) in humans. The increase in set point triggers increased muscle contractions and causes a feeling of cold or chills. This results in greater heat production and efforts to conserve heat. When the set point temperature returns to normal, a person feels hot, becomes flushed, and may begin to sweat. Rarely a fever may trigger a febrile seizure, with this being more common in young children. Fevers do not typically go higher than 41 to 42 °C (106 to 108 °F)."
     },
     {
         id: 8,
-        name: "Cough",
+        name: "Coughing",
         code: "98tde444",
         description: "A cough is a sudden expulsion of air through the large breathing passages that can help clear them of fluids, irritants, foreign particles and microbes. As a protective reflex, coughing can be repetitive with the cough reflex following three phases: an inhalation, a forced exhalation against a closed glottis, and a violent release of air from the lungs following opening of the glottis, usually accompanied by a distinctive sound."
     },

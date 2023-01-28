@@ -3,8 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { GuidelineModule } from './features/guideline/guideline.module';
-import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { AppRoutingModule } from './app-routing.module';
+import { MedicalComponentsModule } from './features/medical-components/medical-components.module';
 
 @NgModule({
   declarations: [
@@ -12,10 +14,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   imports: [
     BrowserModule,
-    SharedModule,
     CoreModule,
     GuidelineModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    AppRoutingModule,
+    MedicalComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
