@@ -1,9 +1,13 @@
-.mat-divider.mat-divider-vertical {
-    border-width: 2px;
-    border-color: darkgray;
-    margin: 2px 10px 2px 10px;
-  }
+.components-list {
+  margin: 20px;
 
-mat-form-field {
-  width: 300px;
+  .nav-buttons {
+    display: flex;
+
+    button {
+      width: 200px;
+      margin: 20px;
+    }
+  }
+  
 }
