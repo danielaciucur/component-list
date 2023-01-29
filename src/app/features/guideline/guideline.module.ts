@@ -4,13 +4,11 @@ import { GuidelineOverviewComponent } from './components/guideline-overview/guid
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import { RouterModule } from '@angular/router'; // CLI imports router
-import { MedicalComponentsService } from 'src/app/medical-components.service';
 
 @NgModule({
   declarations: [
     GuidelineOverviewComponent
   ],
-  providers:[MedicalComponentsService],
   imports: [MatCardModule, MatButtonModule, RouterModule, CommonModule], exports: [
     GuidelineOverviewComponent
   ]

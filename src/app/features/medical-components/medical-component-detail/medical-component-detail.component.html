@@ -1,0 +1,8 @@
+<mat-card *ngIf="medicalComponent$ | async as medicalComponent">
+  <h3>Name: {{ medicalComponent.name }}</h3>
+  <p>Id: {{ medicalComponent.id }}</p>
+  <p>Description: {{medicalComponent.description}}</p>
+   <button mat-raised-button color="primary" (click)="routeState === 'overview' ? backToOverview() : backToComponentList()">
+  {{routeState === 'overview' ? 'Back to Guideline' : 'Back to List' }} 
+</button>
+</mat-card>

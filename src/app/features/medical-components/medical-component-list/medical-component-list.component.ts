@@ -3,15 +3,14 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { MedicalComponentsService } from 'src/app/medical-components.service';
 import { MedicalComponent } from 'src/assets/mock-data/medical-components-mock-data';
-import {SelectionModel} from '@angular/cdk/collections';
+import { SelectionModel } from '@angular/cdk/collections';
 
 @Component({
   selector: 'app-medical-component-picker',
   templateUrl: './medical-component-list.component.html',
-  styleUrls: ['./medical-component-list.component.scss']
+  styleUrls: ['./medical-component-list.component.scss'],
 })
 export class MedicalComponentPickerComponent {
-
   @Input() addComponentsClicked: boolean;
   @Output() backToOverview = new EventEmitter<boolean>();
 
@@ -46,19 +45,22 @@ export class MedicalComponentPickerComponent {
   }
 
   onAddSelectedClick() {
-    console.log(this.selection.selected);
-    this.medicalComponentsService.selectComponents(this.selection.selected);
+    this.medicalComponentsService.saveSelectedComponents(
+      this.selection.selected
+    );
     this.router.navigate(['/guideline-overview']);
   }
 
-  /** Whether the number of selected elements matches the total number of rows. */
+  redirectToDetail(id: string) {
+    this.router.navigate(['/medical-components', id]);
+  }
+
   isAllSelected() {
     const numSelected = this.selection.selected.length;
     const numRows = this.dataSource.data.length;
     return numSelected === numRows;
   }
 
-  /** Selects all rows if they are not all selected; otherwise clear selection. */
   toggleAllRows() {
     if (this.isAllSelected()) {
       this.selection.clear();
@@ -68,11 +70,12 @@ export class MedicalComponentPickerComponent {
     this.selection.select(...this.dataSource.data);
   }
 
-  /** The label for the checkbox on the passed row */
   checkboxLabel(row?: MedicalComponent): string {
     if (!row) {
       return `${this.isAllSelected() ? 'deselect' : 'select'} all`;
     }
-    return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.id + 1}`;
+    return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${
+      row.id + 1
+    }`;
   }
 }

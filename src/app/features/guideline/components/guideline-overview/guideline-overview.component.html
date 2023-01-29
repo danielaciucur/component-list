@@ -12,10 +12,10 @@
                 <mat-card-subtitle> Symptoms </mat-card-subtitle>
                 <button (click)="addComponents()" mat-raised-button color="primary">Add components</button>
             </mat-card-header>
-            <mat-card-content *ngIf="selectedComponents.length">
+            <mat-card-content *ngIf="selectedComponents?.length">
                 <ul>
                     <li *ngFor="let component of selectedComponents">
-                       <span>{{component.name}}</span>
+                       <span (click)="goToDetails(component.id)">{{component.name}}</span>
                     </li>
                   </ul>
             </mat-card-content>

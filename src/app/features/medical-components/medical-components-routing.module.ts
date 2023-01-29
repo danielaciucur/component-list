@@ -4,24 +4,12 @@ import { MedicalComponentDetailsComponent } from './medical-component-detail/med
 import { MedicalComponentPickerComponent } from './medical-component-list/medical-component-list.component';
 
 const medicalComponentRoutes: Routes = [
-    {
-      path: '',
-      component: MedicalComponentPickerComponent,
-      children: [
-        {
-          path: ':id',
-          component: MedicalComponentDetailsComponent,
-        }
-      ]
-    }
-  ];
+  { path: '', component: MedicalComponentPickerComponent },
+  { path: ':id', component: MedicalComponentDetailsComponent },
+];
 
 @NgModule({
-  imports: [
-    RouterModule.forChild(medicalComponentRoutes)
-  ],
-  exports: [
-    RouterModule
-  ]
+  imports: [RouterModule.forChild(medicalComponentRoutes)],
+  exports: [RouterModule],
 })
-export class MedicalComponentsRoutingModule { }
+export class MedicalComponentsRoutingModule {}

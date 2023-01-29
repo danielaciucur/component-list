@@ -9,18 +9,16 @@ import { MedicalComponentsModule } from './features/medical-components/medical-c
 import { MedicalComponentsService } from './medical-components.service';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     GuidelineModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
     AppRoutingModule,
-    MedicalComponentsModule
+    MedicalComponentsModule,
   ],
   providers: [MedicalComponentsService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

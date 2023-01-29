@@ -8,9 +8,8 @@ describe('MedicalComponentPickerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MedicalComponentPickerComponent ]
-    })
-    .compileComponents();
+      declarations: [MedicalComponentPickerComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(MedicalComponentPickerComponent);
     component = fixture.componentInstance;
