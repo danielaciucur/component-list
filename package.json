@@ -1,6 +1,6 @@
 {
   "name": "component-picker",
-  "homepage": "https://danielaciucur.github.io/component-picker",
+  "homepage": "https://danielaciucur/component-picker",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,9 +8,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "ng lint",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "lint": "ng lint"
   },
   "private": true,
   "dependencies": {
@@ -24,7 +22,6 @@
     "@angular/platform-browser": "^15.1.0",
     "@angular/platform-browser-dynamic": "^15.1.0",
     "@angular/router": "^15.1.0",
-    "gh-pages": "^5.0.0",
     "ngx-mat-select-search": "^7.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
@@ -42,6 +39,7 @@
     "@types/jasmine": "~4.3.0",
     "@typescript-eslint/eslint-plugin": "5.48.1",
     "@typescript-eslint/parser": "5.48.1",
+    "angular-cli-ghpages": "^1.0.5",
     "eslint": "^8.31.0",
     "jasmine-core": "~4.5.0",
     "karma": "~6.4.0",
